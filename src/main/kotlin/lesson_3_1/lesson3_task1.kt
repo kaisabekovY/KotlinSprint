@@ -4,7 +4,7 @@ import java.time.LocalDateTime
 import java.time.format.DateTimeFormatter
 
 fun main() {
-    val formatter : DateTimeFormatter = DateTimeFormatter.ofPattern("H")
+    val formatter: DateTimeFormatter = DateTimeFormatter.ofPattern("H")
     val hoursNow: Int = LocalDateTime.now().format(formatter).toInt()
 
     val name: String = "Eldar"
