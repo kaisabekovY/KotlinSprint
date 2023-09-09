@@ -1,14 +1,14 @@
 package lesson_2_2
 
 fun main() {
-    var employeesNumber : Int = 50
-    var employeeSalary : Int = 30000
-    var internsNumber : Int = 20
-    var internsSalary : Int = 20000
+    var employeesNumber: Int = 50
+    var employeeSalary: Int = 30000
+    var internsNumber: Int = 20
+    var internsSalary: Int = 20000
 
-    val salaryTotalOfEmployees : Int = employeeSalary * employeesNumber
-    val salaryTotalOfInterns : Int = internsSalary * internsNumber
-    val totalExpenseOfCompany : Int = salaryTotalOfEmployees + salaryTotalOfInterns
+    val salaryTotalOfEmployees: Int = employeeSalary * employeesNumber
+    val salaryTotalOfInterns: Int = internsSalary * internsNumber
+    val totalExpenseOfCompany: Int = salaryTotalOfEmployees + salaryTotalOfInterns
 
     //Sum new employees
     employeesNumber += internsNumber
