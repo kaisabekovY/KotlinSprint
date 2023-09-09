@@ -13,7 +13,7 @@ fun main() {
     //Sum new employees
     employeesNumber += internsNumber
 
-    val averageSalaryPerEmployee: Int = totalExpenseOfCompany / employeesNumber
+    val averageSalaryPerEmployee : Int = totalExpenseOfCompany / employeesNumber
 
     println("Overall expenses before new employees: $salaryTotalOfEmployees")
     println("Overall expenses after new employees : $totalExpenseOfCompany")
