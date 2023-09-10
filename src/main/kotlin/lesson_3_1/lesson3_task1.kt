@@ -8,7 +8,6 @@ fun main() {
     val hoursNow: Int = LocalDateTime.now().format(formatter).toInt()
 
     val name: String = "Eldar"
-    val space: Char = ' '
 
     val greeting: String = when {
         hoursNow in 11..18 -> "Good Afternoon!"
@@ -16,5 +15,5 @@ fun main() {
         else -> "Good Morning"
     }
 
-    println("$greeting$space$name!")
+    println("$greeting $name!")
 }
