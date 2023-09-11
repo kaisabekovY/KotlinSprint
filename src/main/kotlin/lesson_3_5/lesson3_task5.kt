@@ -3,13 +3,16 @@ package lesson_3_5
 fun main() {
     var moveInfo: String = "D2-D4;0"
 
-    var moveNumber: Int = moveInfo[moveInfo.length - 1].toString().toInt()
-    var from: String = moveInfo[0].toString() + moveInfo[1].toString()
-    var where: String = moveInfo[3].toString() + moveInfo[4].toString()
+    val parts: List<String> = moveInfo.split(";")
+    val moveData: List<String> = parts[0].split("-")
+
+    var moveNumber: String = parts[1]
+    var from: String = moveData[0]
+    var to: String = moveData[1]
 
     println("""
         From: $from
-        Where: $where
+        To: $to
         Number: $moveNumber
         """.trimIndent())
 }
