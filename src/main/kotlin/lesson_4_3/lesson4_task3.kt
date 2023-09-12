@@ -1,11 +1,15 @@
 package lesson_4_3
 
-fun main() {
-    var season: String = "Winter"
-    var airHumidity: Int = 20
-    var isAwningOpen: Boolean = true
-    var isSunny: Boolean = true
+const val season: String = "Winter"
+const val airHumidity: Int = 20
+const val isAwningOpen: Boolean = true
+const val isSunny: Boolean = true
 
-    println("Благоприятные ли сейчас условия для роста бобовых? ${season != "Winter" && airHumidity == 20 && isAwningOpen && isSunny}")
+fun main() {
+    val seasonNow: String = "Winter"
+    val airHumidityNow: Int = 20
+    val isAwningOpenNow: Boolean = true
+    val isSunnyNow: Boolean = true
+    println("Благоприятные ли сейчас условия для роста бобовых? ${season != seasonNow && airHumidity == airHumidityNow && isAwningOpen == isAwningOpenNow && isSunny == isSunnyNow}")
 }
 
