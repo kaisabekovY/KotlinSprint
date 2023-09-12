@@ -1,10 +1,9 @@
 package lesson_4_5
 
-const val maxCrewAmount = 70
-const val minCrewAmount = 55
-const val minProvisionBox = 50
-const val isWeatherSatisfies: Boolean = true
-const val isShipNotDamaged: Boolean = true
+const val MAX_CREW_AMOUNT = 70
+const val MIN_CREW_AMOUNT = 55
+const val MIN_PROVISION_AMOUNT = 50
+const val IS_SHIP_NOT_DAMAGED: Boolean = true
 
 fun main() {
     println("Is ship fixed? Write true or false")
@@ -25,9 +24,9 @@ fun main() {
     println("is Weather Good? Write true or false")
     val isWeatherGood: Boolean = readlnOrNull().toBoolean()
 
-    val firstCondition: Boolean = (isShipNotDamaged == isShipFixed) && (shipCrew >= minCrewAmount && shipCrew <= maxCrewAmount) && (isWeatherGood || isWeatherSatisfies) && (amountOfProvision > minProvisionBox)
+    val firstCondition: Boolean = (IS_SHIP_NOT_DAMAGED == isShipFixed) && (shipCrew >= MIN_CREW_AMOUNT && shipCrew <= MAX_CREW_AMOUNT) && isWeatherGood && (amountOfProvision > MIN_PROVISION_AMOUNT)
 
-    val secondCondition: Boolean = (isShipNotDamaged || isShipFixed) && (shipCrew == maxCrewAmount) && (isWeatherGood == isWeatherSatisfies) && (amountOfProvision > minProvisionBox)
+    val secondCondition: Boolean = (IS_SHIP_NOT_DAMAGED || isShipFixed) && (shipCrew == MAX_CREW_AMOUNT) && isWeatherGood && (amountOfProvision > MIN_PROVISION_AMOUNT)
 
     val isReadyToGo: Boolean = firstCondition || secondCondition
 
