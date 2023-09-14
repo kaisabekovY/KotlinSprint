@@ -1,7 +1,7 @@
 package lesson_5_4
 
 fun main() {
-    var users: MutableMap<String, String> = mutableMapOf(Pair("Zaphod", "PanGalactic"), Pair("kkk", "kkk"))
+    val users: MutableMap<String, String> = mutableMapOf(Pair("Zaphod", "PanGalactic"), Pair("kkk", "kkk"))
 
     println(
         """
@@ -15,10 +15,10 @@ fun main() {
     )
 
     println("Введите логин:")
-    val userName: String? = readLine()
+    val userName: String = readln()
     if (users.containsKey(userName)) {
         println("Введите пароль:")
-        val password: String? = readLine()
+        val password: String = readln()
 
         if (users[userName] == password) {
             println(
@@ -34,11 +34,11 @@ fun main() {
         }
     } else {
         println("Такого пользователя нету в базе. Зарегистрируйтесь\nВведите имя пользователя:")
-        var userName: String? = readlnOrNull()
+        val userName: String = readln()
 
         println("Введите пароль:")
-        var userPassword: String? = readlnOrNull()
+        val userPassword: String = readln()
 
-        users.put(userName!!, userPassword!!)
+        users[userName] = userPassword
     }
 }
