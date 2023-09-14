@@ -5,11 +5,11 @@ import kotlin.random.nextInt
 
 fun main() {
     //Рандомные числа от 0 до включительно 100
-    var firstWinningNumber: Int = Random.nextInt(1..100)
-    var secondWinningNumber: Int = Random.nextInt(1..100)
+    val firstWinningNumber: Int = (1..100).random()
+    val secondWinningNumber: Int = (1..100).random()
 
     //Хранит числа для поиска их в массиве после ввода пользователем
-    var list: MutableList<Int> = mutableListOf(firstWinningNumber, secondWinningNumber)
+    val list: MutableList<Int> = mutableListOf(firstWinningNumber, secondWinningNumber)
 
     //Считает количество угаданных чисел
     var countWins: Int = 0
